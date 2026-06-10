@@ -1,0 +1,4 @@
+# Islo Configuration
+image: docker.io/nikolaik/python-nodejs:python3.12-nodejs22
+setup_script: |
+  pip install pytest
