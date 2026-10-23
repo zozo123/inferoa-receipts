@@ -14,7 +14,7 @@ while `middleware.py` compared them with tz-aware `datetime.now(timezone.utc)`. 
 failure, check out the first commit and run the tests:
 
 ```
-git checkout e4d7630 && pytest
+git checkout e4d7630 && python3 -m pytest
 # TypeError: can't compare offset-naive and offset-aware datetimes
 ```
 
@@ -23,7 +23,7 @@ On `main` the fix from PR #1 is merged and both tests pass.
 ## The receipt
 
 The receipt is [PR #1](https://github.com/zozo123/inferoa-receipts/pull/1): diagnosis,
-failing and passing pytest output, and a one-file diff to `auth_service/token.py`. It ran
-in an isolated [islo.dev](https://islo.dev) sandbox and was made with
+failing and passing pytest output, and a one-file diff to `auth_service/token.py`. The agent
+ran in an isolated [islo.dev](https://islo.dev) sandbox, and the PR was made with
 [Cursor](https://cursor.com). The task prompt named the suspected cause, so this shows the
 sandboxed fix-verify-publish loop, not unguided diagnosis.
